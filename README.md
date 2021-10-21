@@ -2,7 +2,7 @@
 
 ![Gulululgl](https://i.ibb.co/yQdYhtq/image.png)
 
-[VIEW DEMO](gulululgl-search-clone.vercel.app)
+[VIEW DEMO](https://gulululgl-search-clone.vercel.app/search)
 
 ## Introduction
 This is a code repository for the gulululgl search engine. 
