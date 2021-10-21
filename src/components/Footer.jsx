@@ -1,7 +1,5 @@
-export const Footer = () => {
-    return (
-        <div>
-            <h1>Footer</h1>
-        </div>
-    )
-}
+export const Footer = () => (
+    <div className="text-center p-10 mt-10 border-t dark:border-gray-700 border-gray-200 ">
+        © 2021 Goggl, Inc.
+    </div>
+);
