@@ -15,10 +15,9 @@ export const Results = () => {
                 getResults(`/search/q=${searchTerm} videos`)
             }
             else {
-                getResults(`${location.pathname}/q=${searchTerm}=40`)
+                getResults(`${location.pathname}/q=${searchTerm}&num=40`)
             }
         }
-        getResults('/images/q=JavaScript&num=40')
     }, [searchTerm, location.pathname])
 
     if (isLoading) return <Loading />
@@ -29,7 +28,7 @@ export const Results = () => {
                 <div className='flex flex-wrap justify-between space-y-6 sm:px-56'>
                     {results?.results?.map(({ link, title, description }, index) => (
                         <div key={index} className='md:w-2/5'>
-                            <a href={link} target='_blank' rel='norefferer'>
+                            <a href={link} target='_blank' rel='noreferrer'>
                                 <p className='text-sm'>
                                     {link.length > 30 ? link.substring(0, 30) : link}
                                 </p>
@@ -60,7 +59,7 @@ export const Results = () => {
                 <div className='flex flex-wrap justify-between space-y-6 sm:px-56 items-center'>
                     {results?.map(({ links, source, title }, index) => (
                         <div key={index} className='md:w-2/5'>
-                            <a href={links?.[0].href} target='_blank' rel='norefferer' className='hover:underline'>
+                            <a href={links?.[0].href} target='_blank' rel='noreferrer' className='hover:underline'>
                                 <p className='text-lg dark:text-blue-300 text-blue-700'>
                                     {title}
                                 </p>
@@ -70,7 +69,6 @@ export const Results = () => {
                                     {source?.href}
                                 </a>
                             </div>
-
                         </div>
                     ))}
                 </div>

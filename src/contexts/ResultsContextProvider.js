@@ -6,7 +6,7 @@ const baseUrl = "https://google-search3.p.rapidapi.com/api/v1";
 export const ResultContextProvider = ({ children }) => {
   const [results, setResults] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [searchTerm, setSearchTerm] = useState("Elon Musk");
+  const [searchTerm, setSearchTerm] = useState("");
 
   // /videos /search /images
   const getResults = async (type) => {
@@ -17,7 +17,7 @@ export const ResultContextProvider = ({ children }) => {
       headers: {
         "x-user-agent": "desktop",
         "x-rapidapi-host": "google-search3.p.rapidapi.com",
-        "x-rapidapi-key": "f24695138bmshb472d99a5e72a7bp1a9a02jsn44a3f6dbf05e",
+        "x-rapidapi-key": "fa94dacc43msh0bd2ce54684e0e6p1e54e6jsnecd1e2fd900e",
       },
     });
     const data = await response.json();

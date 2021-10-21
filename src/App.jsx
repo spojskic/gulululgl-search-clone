@@ -5,7 +5,7 @@ import { Navbar } from "./components/Navbar"
 import { Routes } from "./components/Routes"
 
 const App = () => {
-    const [darkTheme, setDarkTheme] = useState(false)
+    const [darkTheme, setDarkTheme] = useState(true)
 
     return (
         <div className={darkTheme ? 'dark' : ''}>
